@@ -30,9 +30,16 @@ contoh mau buat halaman landing page
 
 `get checkout landing-page`
 
-lakukan perubahan
+- lakukan perubahan
 
-`git push -u origin dev`
+`git push`
+
+- terus ke github
+- lakukan pull request
+
+- **ingat kalo pull request ke cabang dev bukan master**
+
+- bila perlu tambahkan 1 reviewer
 
 ### **Timeline**
 
@@ -42,9 +49,9 @@ DEADLINE : 28 Oktober
 
 15/10/21 : Wireframe
 
-16 - 17/10/21 : Fitur tampilan menu makanan
+16 - 17/10/21 : Tampilan landing page, menu, menuku, dan artikel
 
-18 - 19/10/21 : Fitur input menu makanan oleh user (web storage)
+18 - 19/10/21 : Fitur input menu makanan oleh user (web storage), Fitur login (web storage)
 
 20 - 21/10/21 : Fitur tampilan list makanan hari ini (dari yang diinput)
 
