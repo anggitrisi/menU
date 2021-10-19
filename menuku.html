@@ -48,7 +48,7 @@
     <div class="container p-4">
       <!-- Menu Hari Ini -->
       <h3 class="text-center text-lg-start">Daftar Menu Hari Ini</h3>
-      <h6 class="text-center text-lg-start">Sabtu, 16 Oktober 2021</h6>
+      <h6 class="text-center text-lg-start" id="today-date"></h6>
       <div class="row">
         <div class="col-lg-7 col-sm-12">
           <div class="row">
@@ -327,7 +327,7 @@
       <hr />
       <!-- Menu Kemarin -->
       <h3 class="text-center text-lg-start">Kemarin</h3>
-      <h6 class="text-center text-lg-start">Jumat, 15 Oktober 2021</h6>
+      <h6 class="text-center text-lg-start" id="yesterday-date"></h6>
       <div class="row">
         <div class="col-lg-7 col-sm-12">
           <div class="row">
@@ -619,7 +619,7 @@
           <div class="modal-body">Anda yakin ingin menghapus menu ini dari daftar? Proses ini tidak dapat dibatalkan.</div>
           <div class="modal-footer">
             <button type="button" class="btn btn-info" data-bs-dismiss="modal">Batalkan</button>
-            <button type="button" class="btn btn-danger">Hapus</button>
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Hapus</button>
           </div>
         </div>
       </div>
@@ -630,54 +630,56 @@
       <div class="modal-dialog modal-confirm">
         <div class="modal-content">
           <div class="modal-header">
-            <!-- <h4 class="modal-title text-center" id="staticBackdropLabel">Edit Data</h4> -->
             <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h5>Edit Menu</h5>
           </div>
           <div class="modal-body text-start">
-            <div class="row">
-              <h5>Ayam Goreng</h5>
-              <div class="col-md-4 py-3">
-                <img src="https://images.unsplash.com/photo-1626082896492-766af4eb6501?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=580&q=80" class="img-fluid" alt="fried_chicken_picture" />
+            <div class="container">
+              <div class="row">
+                <h6 class="text-center text-md-start text-lg-start">Ayam Goreng</h6>
+                <div class="col-lg-4 py-3 d-none d-lg-block">
+                  <img src="https://images.unsplash.com/photo-1626082896492-766af4eb6501?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=580&q=80" class="img-fluid" alt="fried_chicken_picture" />
+                </div>
+                <div class="col-lg-8 col-md-12">
+                  <table class="table table-borderless table-sm">
+                    <tr>
+                      <th colspan="3"><small>Kandungan gizi perporsi (100g)</small></th>
+                    </tr>
+                    <tr>
+                      <td><small>Karbohidrat</small></td>
+                      <td><small>200g</small></td>
+                    </tr>
+                    <tr>
+                      <td><small>Protein</small></td>
+                      <td><small>300g</small></td>
+                    </tr>
+                    <tr>
+                      <td><small>Lemak</small></td>
+                      <td><small>100g</small></td>
+                    </tr>
+                    <tr>
+                      <td class="text-muted">
+                        <small><i class="fas fa-fire"></i> Kalori</small>
+                      </td>
+                      <td class="text-muted"><small>300kkal</small></td>
+                    </tr>
+                  </table>
+                </div>
               </div>
-              <div class="col-md-8 ms-auto py-1">
-                <table class="table table-borderless table-sm">
-                  <tr>
-                    <th colspan="3"><small>Kandungan gizi perporsi (100g)</small></th>
-                  </tr>
-                  <tr>
-                    <td><small>Karbohidrat</small></td>
-                    <td><small>200g</small></td>
-                  </tr>
-                  <tr>
-                    <td><small>Protein</small></td>
-                    <td><small>300g</small></td>
-                  </tr>
-                  <tr>
-                    <td><small>Lemak</small></td>
-                    <td><small>100g</small></td>
-                  </tr>
-                  <tr>
-                    <td class="text-muted">
-                      <small><i class="fas fa-fire"></i> Kalori</small>
-                    </td>
-                    <td class="text-muted"><small>300kkal</small></td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-group">
-                <input type="number" class="form-control m-2" placeholder="jumlah" aria-label="jumlah" />
-                <select id="servingOption" class="form-select m-2">
-                  <option value="1" selected>porsi (100g)</option>
-                  <option value="2">g</option>
-                </select>
+              <div class="row">
+                <div class="input-group">
+                  <input type="number" class="form-control m-2" placeholder="jumlah" aria-label="jumlah" />
+                  <select id="servingOption" class="form-select m-2">
+                    <option value="1" selected>porsi (100g)</option>
+                    <option value="2">g</option>
+                  </select>
+                </div>
               </div>
             </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-info" data-bs-dismiss="modal">Batalkan</button>
-            <button type="button" class="btn btn-success">Simpan</button>
+            <button type="button" class="btn btn-success">Tambahkan</button>
           </div>
         </div>
       </div>
@@ -698,7 +700,7 @@
           <div class="modal-body">Anda yakin ingin keluar dari menU?</div>
           <div class="modal-footer">
             <button type="button" class="btn btn-info" data-bs-dismiss="modal">Batalkan</button>
-            <button type="button" class="btn btn-primary">Keluar</button>
+            <button type="button" class="btn btn-primary" id="btn-keluar" data-bs-dismiss="modal">Keluar</button>
           </div>
         </div>
       </div>
@@ -706,10 +708,33 @@
 
     <script src="./vendor/js/bootstrap.bundle.js"></script>
     <script type="module">
+      const elTodayDate = document.querySelector("#today-date");
+      const elYesterdayDate = document.querySelector("#yesterday-date");
+
+      const elBtnKeluar = document.querySelector("#btn-keluar");
+
+      // Keluar
+      btnKeluar.addEventListener("click", function (event) {
+        event.preventDefault();
+        sessionStorage.removeItem("username");
+        sessionStorage.removeItem("password");
+        location.reload();
+      });
+
+      // generateAutomaticDate
+      const nama_bulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+      const nama_hari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+      const hari_ini = nama_hari[new Date().getDay()] + ", " + new Date().getDate() + " " + nama_bulan[new Date().getMonth()] + " " + new Date().getFullYear();
+
+      const kemarin = nama_hari[new Date().getDay() - 1] + ", " + (new Date().getDate() - 1) + " " + nama_bulan[new Date().getMonth()] + " " + new Date().getFullYear();
+
+      elTodayDate.innerText = hari_ini;
+      elYesterdayDate.innerText = kemarin;
+
       // WEB STORAGE
       let username = sessionStorage.getItem("username");
       let user_menu_list = localStorage.getItem(username ? username : ""); // "[{id:2,login:'foo'},{id:3,login:'wycats'}]"
-      const user_menu_list = JSON.parse(user_menu_list) || null;
+      // const user_menu_list = JSON.parse(user_menu_list) || null;
 
       // initial user menu list card
       function drawUserMenuList() {
