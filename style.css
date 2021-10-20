@@ -1,7 +1,123 @@
-.blue-text {
+/* General CSS */
+.blue-color {
   color: #3974c8 !important;
 }
 
+.red-color {
+  color: #ef494d;
+}
+
+/* Navbar CSS */
+.navbar .btn {
+  min-width: 100px;
+  font-weight: 600;
+}
+.navbar .btn-danger {
+  background: #ef494d;
+}
+.navbar .btn-danger:hover,
+.navbar .btn-danger:focus {
+  background: #ee3535;
+}
+
+/* Modal CSS */
+.modal-confirm {
+  color: #636363;
+  width: 400px;
+  margin: 30px auto;
+}
+
+.modal-confirm .modal-content {
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  font-size: 14px;
+}
+
+.modal-confirm .modal-header {
+  border-bottom: none;
+  position: relative;
+  flex-direction: column;
+}
+
+.modal-confirm h4 {
+  text-align: center;
+  font-size: 26px;
+  margin: 30px 0 -10px;
+}
+
+.modal-confirm .close {
+  position: absolute;
+  top: -5px;
+  right: -2px;
+}
+
+.modal-confirm .modal-body {
+  color: #999;
+}
+
+.modal-confirm .modal-body th,
+tr {
+  color: #999;
+}
+
+.modal-confirm .modal-footer a {
+  color: #999;
+}
+
+.modal-confirm .icon-box {
+  width: 80px;
+  height: 80px;
+  margin: 0;
+  border-radius: 50%;
+  z-index: 9;
+  text-align: center;
+  border: 3px solid #ef494d;
+}
+.modal-confirm .icon-box i {
+  color: #ef494d;
+  font-size: 46px;
+  margin-top: 13px;
+}
+.modal-confirm .btn {
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.4s;
+  line-height: normal;
+  min-width: 120px;
+  border: none;
+  min-height: 40px;
+  border-radius: 3px;
+  margin: 0 5px;
+  outline: none !important;
+}
+
+.modal-confirm .btn-info {
+  background: #c1c1c1;
+}
+.modal-confirm .btn-info:hover,
+.modal-confirm .btn-info:focus {
+  background: #a8a8a8;
+}
+.modal-confirm .btn-danger {
+  background: #ef494d;
+}
+.modal-confirm .btn-danger:hover,
+.modal-confirm .btn-danger:focus {
+  background: #f20a0f;
+}
+
+.modal-confirm .btn-primary {
+  background: #3974c8;
+}
+.modal-confirm .btn-primary:hover,
+.modal-confirm .btn-primary:focus {
+  background: #3624ab;
+}
+
+/// LandingPage
 
 footer > p, .jumbotron, .tambahan{
   background-color: #dbf0ff;
@@ -137,3 +253,4 @@ button.btn.btn-primary.btn-md:hover{
   background-color:rgb(209, 237, 255);
   color:black;
 }
+
