@@ -1,3 +1,16 @@
+// const togglerEl = document.querySelector(".navbar-toggler")
+// const closeBtnEl = document.querySelector("#closed")
+// const navCollapse = document.querySelector(".navbar-collapse")
+
+// togglerEl.addEventListener("click", function(){
+//     closeBtnEl.classList.remove("d-none")
+//     togglerEl.classList.add("d-none")
+// })
+// closeBtnEl.addEventListener("click", function(){
+//     togglerEl.classList.remove("d-none")
+//     closeBtnEl.classList.add("d-none")
+// })
+
 // Element Modal
 const elLogIn = document.querySelector("#login")
 const elSignUp = document.querySelector("#signup")
@@ -31,6 +44,9 @@ class user{
 // Web Storage
 
 const Profil = JSON.parse(localStorage.getItem("userProfile"))
+if(!Profil){
+    localStorage.setItem("userProfile", "[]")
+}
 
 //  When user clicked SignUp button
 elSubmitSignUp.addEventListener("click", function(){
@@ -41,32 +57,28 @@ elSubmitSignUp.addEventListener("click", function(){
     const passwordValidator = new RegExp(/[a-zA-Z0-9!@#$%^&*]{8,}/)
     if(emailValidator.test(email) && passwordValidator.test(password)){
             // WebStorage -> Local Storage
-            if(!Profil){
-                localStorage.setItem("userProfile", "[]")
-            } else{
-                const anyUser = Profil.find(e=> e.username===elInputUsername.value)
-                const anyEmail = Profil.find(e=> e.email===email)
-                if(anyUser && anyEmail){
-                    alert("Username dan telah digunakan")
-                }else if(anyUser && !anyEmail){
-                    alert("Username telah digunakan")
-                }else if(!anyUser&&anyEmail){
-                    alert("Email telah digunakan")
-                }else{
-                    alert("Selamat Datang")
-                    elProfile.classList.remove("d-none")
-                    elProfile.firstElementChild.childNodes[1].data = elInputUsername.value
-                    elSignUp.classList.add("d-none")
-                    elLogIn.classList.add("d-none")
-                    elCloseBtn[1].click()
-                    const newUser = new user(elInputUsername.value, email, password)
-                    console.log(newUser)
-                    const addProfile = Profil.concat(newUser)
-                    const newData = localStorage.setItem("userProfile", JSON.stringify(addProfile))
-                    console.log(newData)
-                    sessionStorage.setItem("username", elInputUsername.value)
-                    sessionStorage.setItem("password", password)
-                }
+            const anyUser = Profil.find(e=> e.username===elInputUsername.value)
+            const anyEmail = Profil.find(e=> e.email===email)
+            if(anyUser && anyEmail){
+                alert("Username dan telah digunakan")
+            }else if(anyUser && !anyEmail){
+                alert("Username telah digunakan")
+            }else if(!anyUser&&anyEmail){
+                alert("Email telah digunakan")
+            }else{
+                alert("Selamat Datang")
+                elProfile.classList.remove("d-none")
+                elProfile.firstElementChild.childNodes[1].data = elInputUsername.value
+                elSignUp.classList.add("d-none")
+                elLogIn.classList.add("d-none")
+                elCloseBtn[1].click()
+                const newUser = new user(elInputUsername.value, email, password)
+                console.log(newUser)
+                const addProfile = Profil.concat(newUser)
+                const newData = localStorage.setItem("userProfile", JSON.stringify(addProfile))
+                console.log(newData)
+                sessionStorage.setItem("username", elInputUsername.value)
+                sessionStorage.setItem("password", password)
             }
         }else{
             if((emailValidator.test(email))){
