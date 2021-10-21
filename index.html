@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #3974c8">
       <div class="container-fluid">
         <a class="navbar-brand mb-0 h1" href="#"><img src="images/logo.png" alt="" width="30" height="30" class="d-inline-block align-text-top" />menU</a>
@@ -31,19 +32,280 @@
               <a class="nav-link" href="./artikel.html">Artikel</a>
             </li>
           </ul>
-
-          <form class="d-flex me-2">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            <button class="btn btn-outline-light" type="submit">Search</button>
-          </form>
-          <span class="navbar-text me-2 d-none d-lg-block d-md-none text-light"
-            ><img src="images/user.png" class="img-fluid" alt="" width="24" height="24" class="d-inline-block align-text-top" /> Username <a href="#" class="pe-auto link-light"><i class="bi bi-box-arrow-right pe-auto"></i></a
-          ></span>
+          <div class="d-flex justify-content-end">
+            <!-- Signup button -->
+            <button type="button" class="btn btn-primary btn-md mx-2" data-bs-toggle="modal" data-bs-target="#exampleModalDaftar" id="signup">Daftar</button>
+            <!-- Login button -->
+            <button type="button" class="btn btn-danger btn-md" data-bs-toggle="modal" data-bs-target="#exampleModalMasuk" id="login">Masuk</button>
+          </div>
+          <!-- Username -->
+          <div class="d-none profile d-flex justify-content-end">
+            <span class="navbar-text me-2  text-light px-2"
+              ><img src="images/user.png" class="img-fluid mx-2" alt="" width="24" height="24" class="d-inline-block align-text-top" /> Username <a href="" class="pe-auto link-light" data-bs-toggle="modal" data-bs-target="#logoutModal"><i class="bi bi-box-arrow-right pe-auto px-2"></i></a>
+            </span>
+          </div>
         </div>
       </div>
     </nav>
+    <div class="content">
+      <!-- Jumbotron -->
+      <div class="tambahan p-4">
+      </div>
+      <div class="jumbotron my-10">
+          <div class="container text-center text-lg-start pb-10">
+              <div class="row row-cols-auto row-cols-lg-2 gy-10">
+                  <div class="col order-1 order-lg-0">
+                      <h1 class="text-bolder text-blue-300">Buat Catatan Menu Makanan Harianmu</h1>
+                      <p class="lead">Kendalikan konsumsi kalori harianmu. Lacak kalori dan buat daftar menu harianmu dengan menU</p><br>
+                      <p>Produk digital bidang kesehatan yang dapat membantu program diet untuk semua kalangan</p><br><br>
+                      <a class="btn btn-primary btn-lg" href="#" role="button">Getting Started</a>
+                    </div>
+                    <div class="col order-0">
+                      <img src="./images/imageLandingPage.png" width="100%" class="my-10">
+                    </div>
+                  </div>
+              </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#dbf0ff" fill-opacity="1" d="M0,64L120,74.7C240,85,480,107,720,106.7C960,107,1200,85,1320,74.7L1440,64L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"/></svg>
+      <!-- Fitur -->
+      <div class="text-center">
+      <h2>What is menU</h2>
+      </div>
+      <!-- versi desktop -->
+      <div class="versi-lg">
+          <div class="container p-10 mb-10 d-flex justify-content-center">
+              <div class="row p-3 row text-center">
+                  <div class="content col-lg shadow p-3 m-2 bg-body rounded-4">
+                    <img src="./images/search.png" width="20%" class="m-2">
+                    <h4>Lacak Kalori</h4>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <p class="p-2">Cari tahu jumlah kandungan dan jumlah kalor dalam makanan yang Anda konsumsi</p>
+                  </div>
+                  <div class="content col-lg shadow p-3 m-2 bg-body rounded-4">
+                    <img src="./images/note.png" width="20%" class="m-2">
+                    <h4>Lihat Daftar Menumu</h4>
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                      <p>Lihat daftar menu harian yang dibuat dan cari tahu total kalori dari menu harian Anda</p>
+                  </div>
+                  <div class="content col-lg shadow p-3 m-2 bg-body rounded-4">
+                    <img src="./images/search.png" width="20%" class="m-2">
+                    <h4>Lihat Riwayat Kalori</h4>
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                      <p>Lihat daftar menu harian yang dibuat dari hari pertama</p>
+                  </div>
+                  <div class="content col-lg shadow p-3 m-2 bg-body rounded-4">
+                    <img src="./images/note.png" width="20%" class="m-2">
+                    <h4>Artikel Diet</h4>
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                      <p>Perluas wawasan mengenai kesehatan dan berbagai tips diet melalui artikel</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- versi mobile -->
+      <div class="versi-sm">
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" id="slide" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" id="slide" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" id="slide" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" id="slide" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner text-center p-5 mx-auto position-relative">
+              <div class="carousel-item active">
+                <div class="content col-lg shadow p-3 m-2 bg-body rounded">
+                  <img src="./images/search.png" width="20%" class="m-2">
+                  <h4>Lacak Kalori</h4>
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <p class="p-2">Cari tahu jumlah kandungan dan jumlah kalor dalam makanan yang Anda konsumsi</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="content col-lg shadow p-3 m-2 bg-body rounded">
+                  <img src="./images/note.png" width="20%" class="m-2">
+                  <h4>Lihat Daftar Menumu</h4>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <p>Lihat daftar menu harian yang dibuat dan cari tahu total kalori dari menu harian Anda</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="content col-lg shadow p-3 m-2 bg-body rounded">
+                  <img src="./images/search.png" width="20%" class="m-2">
+                  <h4>Lihat Riwayat Kalori</h4>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <p>Lihat daftar menu harian yang dibuat dari hari pertama</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="content col-lg shadow p-3 m-2 bg-body rounded">
+                  <img src="./images/note.png" width="20%" class="m-2">
+                  <h4>Artikel Diet</h4>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <p>Perluas wawasan mengenai kesehatan dan berbagai tips diet melalui artikel</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+      </div>
+      <!-- Testimoni -->
+      <div class="p-4 text-center">
+        <h2>Cerita dari Pengguna</h2>
+      </div>
+      <div class="container">
+          <div class="row mx-100">
+            <div class="col">
+              <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner bg-blue-500">
+                  <div class="carousel-item active">
+                    <div class="container">
+                      <div class="row p-4  d-flex justify-content-center">
+                        <img src="./images/hoyeonjung.png" class="photo" alt="">
+                        <h5 class="text-center">-6 KG IN 6 MONTHS</h5>
+                        <p>"The best thing about menU is the full overview you get on your nutrition. I’ve learnt how to prioritize my food which makes me even more motivated to continue my journey. I’ve tried other similar apps before, but Lifesum is really easy to use and stick to."</p>
+                        <p class="text-bolder text-center"> Ho Yeon Jung, 25</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="container">
+                      <div class="row p-4  d-flex justify-content-center">
+                        <img src="./images/kimtaeri.png" class="photo" alt="">
+                        <h5 class="text-center">-5 KG IN 4 MONTHS</h5>
+                        <p>”This app is like the best thing that has happened to my health. I was shocked how my cravings were gone after only a couple of days and not wanting to eat between meals really helped. Losing 5kg in only 3 weeks is fantastic, but the best part is the health improvement. I feel remarkably much better, have more energy, better mood, can play with my kids and do more than ever.”</p>
+                        <p class="text-bolder text-center">Kim Tae Ri, 27</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="container">
+                      <div class="row p-4  d-flex justify-content-center">
+                        <img src="./images/wihajoon.png" class="photo" alt="">
+                        <h5 class="text-center">-4.7 KG IN 3 MONTHS</h5>
+                        <p>”I’ve learned that dieting doesn’t have to be difficult, and was really surprised I was allowed to eat tasty things like sandwiches and dressings! The food was delicious, easy to cook, and you even get a shopping list. This program was so easy to follow, and my cravings were gone after only a few days!”</p>
+                        <p class="text-bolder text-center"> Wi Ha Joon, 21</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        
+            </div>
+          </div>
+      </div>
+    </div>
+    <footer>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#dbf0ff" fill-opacity="1" d="M0,256L120,245.3C240,235,480,213,720,213.3C960,213,1200,235,1320,245.3L1440,256L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"/></svg>
+        <p class="text-center pb-10 text-dark">&copy; Copyright 2021</p>
+        </div>
+    </footer>
+      <!-- Modal for Login -->
+      <div class="modal fade" id="exampleModalMasuk" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="d-flex justify-content-end">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="container">
+                <div class="row row-cols-1 gy-2">
+                  <h2 class="modal-title text-center" id="exampleModalLabel">menU</h2><br>
+                  <div class="col d-none">
+                    <input type="text" label="email" class="p-2 email" placeholder="email">
+                  </div>
+                  <div class="col">
+                    <input type="text" label="username" class="p-2 username" placeholder="username">
+                  </div>
+                  <div class="col">
+                    <input type="password" name="pass" label="password" id="exampleFormControlInput1" class="p-2 pass" placeholder="password">
+                    <div id="passwordHelpBlock" class="form-text">
+                      Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+                    </div><br>
+                    <div class="position-relative py-3">
+                      <div class="position-absolute top-50 start-50 translate-middle">
+                        <button type="submit" id="submitLogIn" class="btn btn-primary">Masuk</button>
+                      </div>
+                    </div>
+                    <div class="form-text" id="exampleFormControlInput2">Belum punya akun? <a href="#" class="min-text text-blue fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModalDaftar">Daftar</a> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal for SignUp -->
+      <div class="modal fade" id="exampleModalDaftar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="d-flex justify-content-end">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="container">
+                <div class="row row-cols-1 gy-2">
+                  <h2 class="modal-title text-center" id="exampleModalLabel">menU</h2><br>
+                  <div class="col">
+                    <input type="text" label="email" class="p-2 email" placeholder="email">
+                  </div>
+                  <div class="col">
+                    <input type="text" label="username" class="p-2 user" placeholder="username">
+                  </div>
+                  <div class="col">
+                    <input type="password" name="pass" label="password" id="exampleFormControlInput3" class="p-2 pass" placeholder="password">
+                    <div id="passwordHelpBlock" class="form-text">
+                      Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+                    </div><br>
+                    <div class="position-relative py-3">
+                      <div class="position-absolute top-50 start-50 translate-middle">
+                        <button type="submit" id="submitSignUp" class="btn btn-primary">Daftar</button>
+                      </div>
+                    </div>
+                    <div class="form-text" id="exampleFormControlInput4">Sudah punya akun? <a href="" class="min-text text-blue fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModalMasuk">Masuk</a> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
+          <!-- Logout Modal -->
+    <div class="modal fade" id="logoutModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-confirm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="icon-box">
+              <i class="bi bi-exclamation"></i>
+            </div>
+            <h4 class="modal-title text-center" id="staticBackdropLabel">Anda yakin?</h4>
+            <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">Anda yakin ingin keluar dari menU?</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-info" data-bs-dismiss="modal">Batalkan</button>
+            <button type="button" class="btn btn-primary" id="btn-keluar" data-bs-dismiss="modal">Keluar</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="./vendor/js/bootstrap.bundle.js"></script>
-    <script src="./script.js"></script>
+    <script src="./script.js"> 
+    </script>
   </body>
 </html>

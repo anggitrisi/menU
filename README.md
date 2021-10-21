@@ -32,6 +32,10 @@ contoh mau buat halaman landing page
 
 - lakukan perubahan
 
+`git add .`
+
+`git commit`
+
 `git push`
 
 - terus ke github
