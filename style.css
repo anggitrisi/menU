@@ -123,6 +123,9 @@ footer > p, .jumbotron, .tambahan{
   background-color: #dbf0ff;
 }
 
+.jumbotron, .tambahan, footer > p{
+  background-color: #dbf0ff;
+}
 .modal-content{
   padding: 15px;
   max-width: 450px;
