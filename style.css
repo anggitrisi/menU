@@ -117,7 +117,8 @@ tr {
   background: #3624ab;
 }
 
-/// LandingPage
+
+/* LandingPage */
 
 footer > p, .jumbotron, .tambahan{
   background-color: #dbf0ff;
@@ -256,4 +257,3 @@ button.btn.btn-primary.btn-md:hover{
   background-color:rgb(209, 237, 255);
   color:black;
 }
-

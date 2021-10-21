@@ -55,7 +55,7 @@ DEADLINE : 28 Oktober
 
 16 - 17/10/21 : Tampilan landing page, menu, menuku, dan artikel
 
-18 - 19/10/21 : Fitur input menu makanan oleh user (web storage), Fitur login (web storage)
+18 - 19/10/21 : Fitur input menu makanan oleh user (web storage), Fitur masuk (web storage)
 
 20 - 21/10/21 : Fitur tampilan list makanan hari ini (dari yang diinput)
 
