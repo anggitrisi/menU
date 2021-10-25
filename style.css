@@ -117,14 +117,13 @@ tr {
   background: #3624ab;
 }
 
+/// LandingPage
 
-/* LandingPage */
-
-footer > p, .jumbotron, .tambahan{
+footer, .jumbotron, .tambahan{
   background-color: #dbf0ff;
 }
 
-.jumbotron, .tambahan, footer > p{
+.jumbotron, .tambahan, footer{
   background-color: #dbf0ff;
 }
 .modal-content{
@@ -180,11 +179,8 @@ button[type="submit"] {
 }
 
 
-nav > div > div > ul > li > a:hover{
-  font-size:18px;
-}
-li.nav-item:active{
-  color:rgb(209, 237, 255)
+li.nav-item:hover, li.nav-item:active{
+  font-weight: 600;
 }
 
 div.content.col-lg.shadow.p-3.m-2.bg-body.rounded{
@@ -213,9 +209,6 @@ div.content.col-lg.shadow.p-3.m-2.bg-body.rounded{
   justify-content:center;
 }
 
-.carousel-indicators{
-  background-color:none;
-}
 button#slide{
   border:0.1px solid rgb(128, 128, 128);
   height:10px;
@@ -223,11 +216,11 @@ button#slide{
   border-radius:50%;
   background-color:solid white;
 }
-.versi-sm.carousel-indicators > button.active{
-  border:5px solid rgb(128, 128, 128);
-  height:15px;
-  width:15px;
-  background-color:solid rgb(166, 166, 166);
+div.carousel-indicators button#slide.active{
+  border:1px solid rgb(128, 128, 128);
+  height:12px;
+  width:12px;
+  background:solid rgb(255, 64, 102);
 }
 
 
@@ -240,13 +233,18 @@ img.photo{
 }
 
 #carouselExampleControls > button.carousel-control-prev, #carouselExampleControls > button.carousel-control-next{
-  background-color:rgb(46, 129, 184);
+  background-color:rgb(255, 64, 102);
   border-radius:50%;
-  height:50px;
-  width:50px;
+  height:30px;
+  width:30px;
   display:flex;
   margin:140px 20px auto;
 }
+span.carousel-control-prev-icon, span.carousel-control-next-icon{
+  height:15px;
+  width:15px;
+}
+
 
 button.btn.btn-primary.btn-md{
   background-color:white;
@@ -256,4 +254,13 @@ button.btn.btn-primary.btn-md{
 button.btn.btn-primary.btn-md:hover{
   background-color:rgb(209, 237, 255);
   color:black;
+}
+
+div.content.col-lg.shadow.p-3.m-2.bg-body.rounded-4{
+  border-radius:15px;
+  
+}
+
+footer > h3{
+  margin-top: -13%;
 }
