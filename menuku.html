@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>menU</title>
+    <link rel="stylesheet" href="./vendor/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="css/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #3974c8">
+      <div class="container-fluid">
+        <a class="navbar-brand mb-0 h1" href="#"><img src="images/logo.png" alt="" width="30" height="30" class="d-inline-block align-text-top" />menU</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div v class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 70px">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./menu.html">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./menuku.html">Menuku</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./artikel.html">Artikel</a>
+            </li>
+            <li class="nav-item d-lg-none .d-md-block">
+              <a href="#logoutModal" class="nav-link pe-auto link-light" data-bs-toggle="modal"><span class="fas fa-sign-out-alt"></span> keluar</a>
+            </li>
+          </ul>
+          <span class="navbar-text me-2 d-none d-lg-block d-md-none text-light">
+            <img src="images/user.png" class="img-fluid" alt="" width="24" height="24" class="d-inline-block align-text-top" /> Username
+            <a href="#logoutModal" class="pe-auto link-light" data-bs-toggle="modal"><i class="fas fa-sign-out-alt"></i></a>
+          </span>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <div class="container p-4">
+      <!-- Menu Hari Ini -->
+      <h3 class="text-center text-lg-start">Daftar Menu Hari Ini</h3>
+      <h6 class="text-center text-lg-start" id="today-date"></h6>
+      <div class="row">
+        <div class="col-lg-7 col-sm-12">
+          <div class="row">
+            <!--  Card  1-->
+            <div class="card my-3 p-0 col-lg-12 col-6">
+              <div class="row g-0">
+                <div class="col-lg-4">
+                  <img src="https://images.unsplash.com/photo-1626082896492-766af4eb6501?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=580&q=80" class="img-fluid" alt="fried_chicken_picture" />
+                </div>
+                <div class="col-lg-4 align-self-center d-none d-lg-block d-xl-blockk">
+                  <div class="row m-0">
+                    <div class="col-lg-6 my-1">
+                      <div class="card" style="width: 5.5rem; height: 5.5rem">
+                        <div class="card-body pt-3 p-0 fs-6">
+                          <h5 class="card-text text-center">15g</h5>
+                          <p class="card-text text-center align-text-bottom fs-6"><small>Karbohidrat</small></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 my-1">
+                      <div class="card" style="width: 5.5rem; height: 5.5rem">
+                        <div class="card-body pt-3 p-0 fs-6">
+                          <h5 class="card-text text-center">25g</h5>
+                          <p class="card-text text-center align-text-bottom fs-6"><small>Lemak</small></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 my-1">
+                      <div class="card" style="width: 5.5rem; height: 5.5rem">
+                        <div class="card-body pt-3 p-0 fs-6">
+                          <h5 class="card-text text-center">35g</h5>
+                          <p class="card-text text-center align-text-bottom fs-6"><small>Protein</small></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 my-1">
+                      <div class="card" style="width: 5.5rem; height: 5.5rem">
+                        <div class="card-body pt-3 p-0 fs-6">
+                          <h5 class="card-text text-center">300kal</h5>
+                          <p class="card-text text-center align-text-bottom fs-6"><small>Kalori</small></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 d-flex flex-column">
+                  <div class="card-body d-flex justify-content-center">
+                    <div class="d-flex flex-column justify-content-center">
+                      <h5 class="card-title m-0">Ayam Goreng</h5>
+                      <p class="card-text m-0">2 porsi</p>
+                      <p class="card-text d-block d-lg-none d-xxl-">
+                        <small class="text-muted p-0e"><i class="fas fa-fire"></i> 300kkal</small>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-end m-3">
+                    <button type="button" class="btn btn-outline-danger p-0 m-1" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="bi bi-trash-fill mx-3"></i></button>
+                    <button type="button" class="btn btn-outline-success p-0 m-1" data-bs-toggle="modal" data-bs-target="#editModal"><i class="bi bi-pencil-fill mx-3"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Card 1-->
+
+            <!--  Card  2-->
+            <div class="card my-3 p-0 col-lg-12 col-6">
+              <div class="row g-0">
+                <div class="col-lg-4">
+                  <img src="https://images.unsplash.com/photo-1626082896492-766af4eb6501?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=580&q=80" class="img-fluid" alt="fried_chicken_picture" />
+                </div>
+                <div class="col-lg-4 align-self-center d-none d-lg-block d-xl-blockk">
+                  <div class="row m-0">
+                    <div class="col-lg-6 my-1">
+                      <div class="card" style="width: 5.5rem; height: 5.5rem">
+                        <div class="card-body pt-3 p-0 fs-6">
+                          <h5 class="card-text text-center">15g</h5>
+                          <p class="card-text text-center align-text-bottom fs-6"><small>Karbohidrat</small></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 my-1">
+                      <div class="card" style="width: 5.5rem; height: 5.5rem">
+                        <div class="card-body pt-3 p-0 fs-6">
+                          <h5 class="card-text text-center">25g</h5>
+                          <p class="card-text text-center align-text-bottom fs-6"><small>Lemak</small></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 my-1">
+                      <div class="card" style="width: 5.5rem; height: 5.5rem">
+                        <div class="card-body pt-3 p-0 fs-6">
+                          <h5 class="card-text text-center">35g</h5>
+                          <p class="card-text text-center align-text-bottom fs-6"><small>Protein</small></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 my-1">
+                      <div class="card" style="width: 5.5rem; height: 5.5rem">
+                        <div class="card-body pt-3 p-0 fs-6">
+                          <h5 class="card-text text-center">300kal</h5>
+                          <p class="card-text text-center align-text-bottom fs-6"><small>Kalori</small></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 d-flex flex-column">
+                  <div class="card-body d-flex justify-content-center">
+                    <div class="d-flex flex-column justify-content-center">
+                      <h5 class="card-title m-0">Ayam Goreng</h5>
+                      <p class="card-text m-0">2 porsi</p>
+                      <p class="card-text d-block d-lg-none d-xxl-">
+                        <small class="text-muted p-0e"><i class="fas fa-fire"></i> 300kkal</small>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-end m-3">
+                    <button type="button" class="btn btn-outline-danger p-0 m-1"><i class="bi bi-trash-fill mx-3"></i></button>
+                    <button type="button" class="btn btn-outline-success p-0 m-1"><i class="bi bi-pencil-fill mx-3"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Card 2-->
+            <!--  Card  3-->
+            <div class="card my-3 col-lg-12 p-0 col-6">
+              <div class="row g-0">
+                <div class="col-lg-4">
+                  <img src="https://images.unsplash.com/photo-1626082896492-766af4eb6501?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=580&q=80" class="img-fluid" alt="fried_chicken_picture" />
+                </div>
+                <div class="col-lg-4 align-self-center d-none d-lg-block d-xl-blockk">
+                  <div class="row m-0">
+                    <div class="col-lg-6 my-1">
+                      <div class="card" style="width: 5.5rem; height: 5.5rem">
+                        <div class="card-body pt-3 p-0 fs-6">
+                          <h5 class="card-text text-center">15g</h5>
+                          <p class="card-text text-center align-text-bottom fs-6"><small>Karbohidrat</small></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 my-1">
+                      <div class="card" style="width: 5.5rem; height: 5.5rem">
+                        <div class="card-body pt-3 p-0 fs-6">
+                          <h5 class="card-text text-center">25g</h5>
+                          <p class="card-text text-center align-text-bottom fs-6"><small>Lemak</small></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 my-1">
+                      <div class="card" style="width: 5.5rem; height: 5.5rem">
+                        <div class="card-body pt-3 p-0 fs-6">
+                          <h5 class="card-text text-center">35g</h5>
+                          <p class="card-text text-center align-text-bottom fs-6"><small>Protein</small></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 my-1">
+                      <div class="card" style="width: 5.5rem; height: 5.5rem">
+                        <div class="card-body pt-3 p-0 fs-6">
+                          <h5 class="card-text text-center">300kal</h5>
+                          <p class="card-text text-center align-text-bottom fs-6"><small>Kalori</small></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 d-flex flex-column">
+                  <div class="card-body d-flex justify-content-center">
+                    <div class="d-flex flex-column justify-content-center">
+                      <h5 class="card-title m-0">Ayam Goreng</h5>
+                      <p class="card-text m-0">2 porsi</p>
+                      <p class="card-text d-block d-lg-none d-xxl-">
+                        <small class="text-muted p-0e"><i class="fas fa-fire"></i> 300kkal</small>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-end m-3">
+                    <button type="button" class="btn btn-outline-danger p-0 m-1"><i class="bi bi-trash-fill mx-3"></i></button>
+                    <button type="button" class="btn btn-outline-success p-0 m-1"><i class="bi bi-pencil-fill mx-3"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Card 3-->
+
+            <!--  Card  4-->
+            <div class="card my-3 col-lg-12 p-0 col-6">
+              <div class="row g-0">
+                <div class="col-lg-4">
+                  <img src="https://images.unsplash.com/photo-1626082896492-766af4eb6501?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=580&q=80" class="img-fluid" alt="fried_chicken_picture" />
+                </div>
+                <div class="col-lg-4 align-self-center d-none d-lg-block d-xl-block">
+                  <div class="row m-0">
+                    <div class="col-lg-6 my-1">
+                      <div class="card" style="width: 5.5rem; height: 5.5rem">
+                        <div class="card-body pt-3 p-0 fs-6">
+                          <h5 class="card-text text-center">15g</h5>
+                          <p class="card-text text-center align-text-bottom fs-6"><small>Karbohidrat</small></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 my-1">
+                      <div class="card" style="width: 5.5rem; height: 5.5rem">
+                        <div class="card-body pt-3 p-0 fs-6">
+                          <h5 class="card-text text-center">25g</h5>
+                          <p class="card-text text-center align-text-bottom fs-6"><small>Lemak</small></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 my-1">
+                      <div class="card" style="width: 5.5rem; height: 5.5rem">
+                        <div class="card-body pt-3 p-0 fs-6">
+                          <h5 class="card-text text-center">35g</h5>
+                          <p class="card-text text-center align-text-bottom fs-6"><small>Protein</small></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 my-1">
+                      <div class="card" style="width: 5.5rem; height: 5.5rem">
+                        <div class="card-body pt-3 p-0 fs-6">
+                          <h5 class="card-text text-center">300kal</h5>
+                          <p class="card-text text-center align-text-bottom fs-6"><small>Kalori</small></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 d-flex flex-column">
+                  <div class="card-body d-flex justify-content-center">
+                    <div class="d-flex flex-column justify-content-center">
+                      <h5 class="card-title m-0">Ayam Goreng</h5>
+                      <p class="card-text m-0">2 porsi</p>
+                      <p class="card-text d-block d-lg-none d-xxl-">
+                        <small class="text-muted p-0e"><i class="fas fa-fire"></i> 300kkal</small>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-end m-3">
+                    <button type="button" class="btn btn-outline-danger p-0 m-1"><i class="bi bi-trash-fill mx-3"></i></button>
+                    <button type="button" class="btn btn-outline-success p-0 m-1"><i class="bi bi-pencil-fill mx-3"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Card 4-->
+          </div>
+        </div>
+
+        <!-- Right Section -->
+        <!-- Flush -->
+        <div class="col-lg-5">
+          <h5 class="my-2">Total Kandungan Gizi</h5>
+          <div class="row">
+            <div class="col-8">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Karbohidrat</li>
+                <li class="list-group-item">Protein</li>
+                <li class="list-group-item">Lemak</li>
+                <li class="list-group-item fw-bold"><i class="fas fa-fire"></i> Kalori</li>
+              </ul>
+            </div>
+
+            <div class="col-4">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">379g</li>
+                <li class="list-group-item">200g</li>
+                <li class="list-group-item">100g</li>
+                <li class="list-group-item fw-bold">2600kkal</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- End Flush -->
+        <!-- End Right Section -->
+      </div>
+      <hr />
+      <!-- Menu Kemarin -->
+      <h3 class="text-center text-lg-start">Kemarin</h3>
+      <h6 class="text-center text-lg-start" id="yesterday-date"></h6>
+      <div class="row">
+        <div class="col-lg-7 col-sm-12">
+          <div class="row">
+            <!--  Card  1-->
+            <div class="card my-3 p-0 col-lg-12 col-6">
+              <div class="row g-0">
+                <div class="col-lg-4">
+                  <img src="https://images.unsplash.com/photo-1626082896492-766af4eb6501?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=580&q=80" class="img-fluid" alt="fried_chicken_picture" />
+                </div>
+                <div class="col-lg-4 align-self-center d-none d-lg-block d-xl-blockk">
+                  <div class="row m-0">
+                    <div class="col-lg-6 my-1">
+                      <div class="card" style="width: 5.5rem; height: 5.5rem">
+                        <div class="card-body pt-3 p-0 fs-6">
+                          <h5 class="card-text text-center">15g</h5>
+                          <p class="card-text text-center align-text-bottom fs-6"><small>Karbohidrat</small></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 my-1">
+                      <div class="card" style="width: 5.5rem; height: 5.5rem">
+                        <div class="card-body pt-3 p-0 fs-6">
+                          <h5 class="card-text text-center">25g</h5>
+                          <p class="card-text text-center align-text-bottom fs-6"><small>Lemak</small></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 my-1">
+                      <div class="card" style="width: 5.5rem; height: 5.5rem">
+                        <div class="card-body pt-3 p-0 fs-6">
+                          <h5 class="card-text text-center">35g</h5>
+                          <p class="card-text text-center align-text-bottom fs-6"><small>Protein</small></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 my-1">
+                      <div class="card" style="width: 5.5rem; height: 5.5rem">
+                        <div class="card-body pt-3 p-0 fs-6">
+                          <h5 class="card-text text-center">300kal</h5>
+                          <p class="card-text text-center align-text-bottom fs-6"><small>Kalori</small></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 d-flex flex-column">
+                  <div class="card-body d-flex justify-content-center">
+                    <div class="d-flex flex-column justify-content-center">
+                      <h5 class="card-title m-0">Ayam Goreng</h5>
+                      <p class="card-text m-0">2 porsi</p>
+                      <p class="card-text d-block d-lg-none d-xxl-">
+                        <small class="text-muted p-0e"><i class="fas fa-fire"></i> 300kkal</small>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-end m-3">
+                    <button type="button" class="btn btn-outline-danger p-0 m-1"><i class="bi bi-trash-fill mx-3"></i></button>
+                    <button type="button" class="btn btn-outline-success p-0 m-1"><i class="bi bi-pencil-fill mx-3"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Card 1-->
+
+            <!--  Card  2-->
+            <div class="card my-3 p-0 col-lg-12 col-6">
+              <div class="row g-0">
+                <div class="col-lg-4">
+                  <img src="https://images.unsplash.com/photo-1626082896492-766af4eb6501?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=580&q=80" class="img-fluid" alt="fried_chicken_picture" />
+                </div>
+                <div class="col-lg-4 align-self-center d-none d-lg-block d-xl-blockk">
+                  <div class="row m-0">
+                    <div class="col-lg-6 my-1">
+                      <div class="card" style="width: 5.5rem; height: 5.5rem">
+                        <div class="card-body pt-3 p-0 fs-6">
+                          <h5 class="card-text text-center">15g</h5>
+                          <p class="card-text text-center align-text-bottom fs-6"><small>Karbohidrat</small></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 my-1">
+                      <div class="card" style="width: 5.5rem; height: 5.5rem">
+                        <div class="card-body pt-3 p-0 fs-6">
+                          <h5 class="card-text text-center">25g</h5>
+                          <p class="card-text text-center align-text-bottom fs-6"><small>Lemak</small></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 my-1">
+                      <div class="card" style="width: 5.5rem; height: 5.5rem">
+                        <div class="card-body pt-3 p-0 fs-6">
+                          <h5 class="card-text text-center">35g</h5>
+                          <p class="card-text text-center align-text-bottom fs-6"><small>Protein</small></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 my-1">
+                      <div class="card" style="width: 5.5rem; height: 5.5rem">
+                        <div class="card-body pt-3 p-0 fs-6">
+                          <h5 class="card-text text-center">300kal</h5>
+                          <p class="card-text text-center align-text-bottom fs-6"><small>Kalori</small></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 d-flex flex-column">
+                  <div class="card-body d-flex justify-content-center">
+                    <div class="d-flex flex-column justify-content-center">
+                      <h5 class="card-title m-0">Ayam Goreng</h5>
+                      <p class="card-text m-0">2 porsi</p>
+                      <p class="card-text d-block d-lg-none d-xxl-">
+                        <small class="text-muted p-0e"><i class="fas fa-fire"></i> 300kkal</small>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-end m-3">
+                    <button type="button" class="btn btn-outline-danger p-0 m-1"><i class="bi bi-trash-fill mx-3"></i></button>
+                    <button type="button" class="btn btn-outline-success p-0 m-1"><i class="bi bi-pencil-fill mx-3"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Card 2-->
+            <!--  Card  3-->
+            <div class="card my-3 col-lg-12 p-0 col-6">
+              <div class="row g-0">
+                <div class="col-lg-4">
+                  <img src="https://images.unsplash.com/photo-1626082896492-766af4eb6501?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=580&q=80" class="img-fluid" alt="fried_chicken_picture" />
+                </div>
+                <div class="col-lg-4 align-self-center d-none d-lg-block d-xl-blockk">
+                  <div class="row m-0">
+                    <div class="col-lg-6 my-1">
+                      <div class="card" style="width: 5.5rem; height: 5.5rem">
+                        <div class="card-body pt-3 p-0 fs-6">
+                          <h5 class="card-text text-center">15g</h5>
+                          <p class="card-text text-center align-text-bottom fs-6"><small>Karbohidrat</small></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 my-1">
+                      <div class="card" style="width: 5.5rem; height: 5.5rem">
+                        <div class="card-body pt-3 p-0 fs-6">
+                          <h5 class="card-text text-center">25g</h5>
+                          <p class="card-text text-center align-text-bottom fs-6"><small>Lemak</small></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 my-1">
+                      <div class="card" style="width: 5.5rem; height: 5.5rem">
+                        <div class="card-body pt-3 p-0 fs-6">
+                          <h5 class="card-text text-center">35g</h5>
+                          <p class="card-text text-center align-text-bottom fs-6"><small>Protein</small></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 my-1">
+                      <div class="card" style="width: 5.5rem; height: 5.5rem">
+                        <div class="card-body pt-3 p-0 fs-6">
+                          <h5 class="card-text text-center">300kal</h5>
+                          <p class="card-text text-center align-text-bottom fs-6"><small>Kalori</small></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 d-flex flex-column">
+                  <div class="card-body d-flex justify-content-center">
+                    <div class="d-flex flex-column justify-content-center">
+                      <h5 class="card-title m-0">Ayam Goreng</h5>
+                      <p class="card-text m-0">2 porsi</p>
+                      <p class="card-text d-block d-lg-none d-xxl-">
+                        <small class="text-muted p-0e"><i class="fas fa-fire"></i> 300kkal</small>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-end m-3">
+                    <button type="button" class="btn btn-outline-danger p-0 m-1"><i class="bi bi-trash-fill mx-3"></i></button>
+                    <button type="button" class="btn btn-outline-success p-0 m-1"><i class="bi bi-pencil-fill mx-3"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Card 3-->
+
+            <!--  Card  4-->
+            <div class="card my-3 col-lg-12 p-0 col-6">
+              <div class="row g-0">
+                <div class="col-lg-4">
+                  <img src="https://images.unsplash.com/photo-1626082896492-766af4eb6501?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=580&q=80" class="img-fluid" alt="fried_chicken_picture" />
+                </div>
+                <div class="col-lg-4 align-self-center d-none d-lg-block d-xl-block">
+                  <div class="row m-0">
+                    <div class="col-lg-6 my-1">
+                      <div class="card" style="width: 5.5rem; height: 5.5rem">
+                        <div class="card-body pt-3 p-0 fs-6">
+                          <h5 class="card-text text-center">15g</h5>
+                          <p class="card-text text-center align-text-bottom fs-6"><small>Karbohidrat</small></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 my-1">
+                      <div class="card" style="width: 5.5rem; height: 5.5rem">
+                        <div class="card-body pt-3 p-0 fs-6">
+                          <h5 class="card-text text-center">25g</h5>
+                          <p class="card-text text-center align-text-bottom fs-6"><small>Lemak</small></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 my-1">
+                      <div class="card" style="width: 5.5rem; height: 5.5rem">
+                        <div class="card-body pt-3 p-0 fs-6">
+                          <h5 class="card-text text-center">35g</h5>
+                          <p class="card-text text-center align-text-bottom fs-6"><small>Protein</small></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 my-1">
+                      <div class="card" style="width: 5.5rem; height: 5.5rem">
+                        <div class="card-body pt-3 p-0 fs-6">
+                          <h5 class="card-text text-center">300kal</h5>
+                          <p class="card-text text-center align-text-bottom fs-6"><small>Kalori</small></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 d-flex flex-column">
+                  <div class="card-body d-flex justify-content-center">
+                    <div class="d-flex flex-column justify-content-center">
+                      <h5 class="card-title m-0">Ayam Goreng</h5>
+                      <p class="card-text m-0">2 porsi</p>
+                      <p class="card-text d-block d-lg-none d-xxl-">
+                        <small class="text-muted p-0e"><i class="fas fa-fire"></i> 300kkal</small>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-end m-3">
+                    <button type="button" class="btn btn-outline-danger p-0 m-1"><i class="bi bi-trash-fill mx-3"></i></button>
+                    <button type="button" class="btn btn-outline-success p-0 m-1"><i class="bi bi-pencil-fill mx-3"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Card 4-->
+          </div>
+        </div>
+
+        <!-- Right Section -->
+        <!-- Flush -->
+        <div class="col-lg-5">
+          <h5 class="my-2">Total Kandungan Gizi</h5>
+          <div class="row">
+            <div class="col-8">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Karbohidrat</li>
+                <li class="list-group-item">Protein</li>
+                <li class="list-group-item">Lemak</li>
+                <li class="list-group-item fw-bold"><i class="fas fa-fire"></i> Kalori</li>
+              </ul>
+            </div>
+
+            <div class="col-4">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">379g</li>
+                <li class="list-group-item">200g</li>
+                <li class="list-group-item">100g</li>
+                <li class="list-group-item fw-bold">2600kkal</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- End Flush -->
+        <!-- End Right Section -->
+      </div>
+    </div>
+
+    <!-- Delete Modal -->
+    <div class="modal fade" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-confirm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="icon-box">
+              <i class="bi bi-exclamation"></i>
+            </div>
+            <h4 class="modal-title text-center" id="staticBackdropLabel">Anda yakin?</h4>
+            <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">Anda yakin ingin menghapus menu ini dari daftar? Proses ini tidak dapat dibatalkan.</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-info" data-bs-dismiss="modal">Batalkan</button>
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Hapus</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div class="modal fade" id="editModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-confirm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h5>Edit Menu</h5>
+          </div>
+          <div class="modal-body text-start">
+            <div class="container">
+              <div class="row">
+                <h6 class="text-center text-md-start text-lg-start">Ayam Goreng</h6>
+                <div class="col-lg-4 py-3 d-none d-lg-block">
+                  <img src="https://images.unsplash.com/photo-1626082896492-766af4eb6501?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=580&q=80" class="img-fluid" alt="fried_chicken_picture" />
+                </div>
+                <div class="col-lg-8 col-md-12">
+                  <table class="table table-borderless table-sm">
+                    <tr>
+                      <th colspan="3"><small>Kandungan gizi perporsi (100g)</small></th>
+                    </tr>
+                    <tr>
+                      <td><small>Karbohidrat</small></td>
+                      <td><small>200g</small></td>
+                    </tr>
+                    <tr>
+                      <td><small>Protein</small></td>
+                      <td><small>300g</small></td>
+                    </tr>
+                    <tr>
+                      <td><small>Lemak</small></td>
+                      <td><small>100g</small></td>
+                    </tr>
+                    <tr>
+                      <td class="text-muted">
+                        <small><i class="fas fa-fire"></i> Kalori</small>
+                      </td>
+                      <td class="text-muted"><small>300kkal</small></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-group">
+                  <input type="number" class="form-control m-2" placeholder="jumlah" aria-label="jumlah" />
+                  <select id="servingOption" class="form-select m-2">
+                    <option value="1" selected>porsi (100g)</option>
+                    <option value="2">g</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-info" data-bs-dismiss="modal">Batalkan</button>
+            <button type="button" class="btn btn-success">Tambahkan</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Edit Modal -->
+
+    <!-- Logout Modal -->
+    <div class="modal fade" id="logoutModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-confirm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="icon-box">
+              <i class="bi bi-exclamation"></i>
+            </div>
+            <h4 class="modal-title text-center" id="staticBackdropLabel">Anda yakin?</h4>
+            <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">Anda yakin ingin keluar dari menU?</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-info" data-bs-dismiss="modal">Batalkan</button>
+            <button type="button" class="btn btn-primary" id="btn-keluar" data-bs-dismiss="modal">Keluar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./vendor/js/bootstrap.bundle.js"></script>
+    <script type="module">
+      const elTodayDate = document.querySelector("#today-date");
+      const elYesterdayDate = document.querySelector("#yesterday-date");
+
+      const elBtnKeluar = document.querySelector("#btn-keluar");
+
+      // Keluar
+      elBtnKeluar.addEventListener("click", function (event) {
+        event.preventDefault();
+        sessionStorage.removeItem("username");
+        sessionStorage.removeItem("password");
+        location.reload();
+      });
+
+      // generateAutomaticDate
+      const nama_bulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+      const nama_hari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+      const hari_ini = nama_hari[new Date().getDay()] + ", " + new Date().getDate() + " " + nama_bulan[new Date().getMonth()] + " " + new Date().getFullYear();
+
+      const kemarin = nama_hari[new Date().getDay() - 1] + ", " + (new Date().getDate() - 1) + " " + nama_bulan[new Date().getMonth()] + " " + new Date().getFullYear();
+
+      elTodayDate.innerText = hari_ini;
+      elYesterdayDate.innerText = kemarin;
+
+      // WEB STORAGE
+      let username = sessionStorage.getItem("username");
+      let user_menu_list = localStorage.getItem(username ? username : ""); // "[{id:2,login:'foo'},{id:3,login:'wycats'}]"
+      // const user_menu_list = JSON.parse(user_menu_list) || null;
+
+      // initial user menu list card
+      function drawUserMenuList() {
+        // check if username exist in session storage
+        // read: check if user logged in already
+        if (username !== null) {
+          user_menu_list.forEach((user_menu) => {
+            // element/card creation for each users
+            const elCol = document.createElement("div");
+            elCol.classList.add("col-xs-12", "col-sm-6", "col-md-4", "col-lg-3");
+            const elCard = document.createElement("div");
+            elCard.classList.add("card");
+            const elCardImg = document.createElement("div");
+            elCard.classList.add("card-img-top");
+            elCard.setAttribute("src", user.avatar_url);
+            const elCardBody = document.createElement("div");
+            elCardBody.classList.add("card-body");
+            const elCardTitle = document.createElement("div");
+            elCardTitle.classList.add("card-title");
+            elCardTitle.innerHTML = user.login;
+            const elCardButton = document.createElement("button");
+
+            // handle button state
+            const followings = JSON.parse(profile);
+            const alreadyFollow = followings?.find((u) => u.id === user.id);
+            if (alreadyFollow !== undefined) {
+              elCardButton.classList.add("follow-button", "btn", "btn-success", "w-100");
+              elCardButton.setAttribute("type", "button");
+              elCardButton.setAttribute("data-id", user.id);
+              elCardButton.innerHTML = "Unfollow";
+            } else {
+              elCardButton.classList.add("follow-button", "btn", "btn-primary", "w-100");
+              elCardButton.setAttribute("type", "button");
+              elCardButton.setAttribute("data-id", user.id);
+              elCardButton.innerHTML = "Follow";
+            }
+
+            // element attachment
+            elCardBody.appendChild(elCardTitle);
+            elCardBody.appendChild(elCardButton);
+            elCard.appendChild(elCardBody);
+            elCard.appendChild(elCardImg);
+            elCol.appendChild(elCard);
+            elListUser.appendChild(elCol);
+          });
+        }
+      }
+    </script>
+  </body>
+</html>
