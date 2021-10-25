@@ -68,7 +68,7 @@ elSubmitSignUp.addEventListener("click", function(){
             }else{
                 alert("Selamat Datang")
                 elProfile.classList.remove("d-none")
-                elProfile.firstElementChild.childNodes[1].data = elInputUsername.value
+                elProfile.firstElementChild.childNodes[4].data = elInputUsername.value
                 elSignUp.classList.add("d-none")
                 elLogIn.classList.add("d-none")
                 elCloseBtn[1].click()
@@ -78,7 +78,6 @@ elSubmitSignUp.addEventListener("click", function(){
                 const newData = localStorage.setItem("userProfile", JSON.stringify(addProfile))
                 console.log(newData)
                 sessionStorage.setItem("username", elInputUsername.value)
-                sessionStorage.setItem("password", password)
             }
         }else{
             if((emailValidator.test(email))){
@@ -101,7 +100,7 @@ elSubmitLogIn.addEventListener("click", function(){
         if(Profil[indexUser].password===password){
             alert("Yeay benar")
             elProfile.classList.remove("d-none")
-            elProfile.firstElementChild.childNodes[1].data = username
+            elProfile.firstElementChild.childNodes[4].data = username
             elSignUp.classList.add("d-none")
             elLogIn.classList.add("d-none")
             elCloseBtn[1].click()

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>menU</title>
+    <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="./vendor/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="./style.css" />
@@ -14,11 +15,11 @@
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #3974c8">
       <div class="container-fluid">
         <a class="navbar-brand mb-0 h1" href="#"><img src="images/logo.png" alt="" width="30" height="30" class="d-inline-block align-text-top" />menU</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div v class="collapse navbar-collapse" id="navbarScroll">
-          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 70px">
+        <div v class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <ul class="navbar-nav me-auto my-2 my-lg-0">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
             </li>
@@ -34,14 +35,16 @@
           </ul>
           <div class="d-flex justify-content-end">
             <!-- Signup button -->
-            <button type="button" class="btn btn-primary btn-md mx-2" data-bs-toggle="modal" data-bs-target="#exampleModalDaftar" id="signup">Daftar</button>
+            <button type="button" class="btn btn-primary btn-md mx-2 rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModalDaftar" id="signup">Daftar</button>
             <!-- Login button -->
-            <button type="button" class="btn btn-danger btn-md" data-bs-toggle="modal" data-bs-target="#exampleModalMasuk" id="login">Masuk</button>
+            <button type="button" class="btn btn-danger btn-md rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModalMasuk" id="login">Masuk</button>
           </div>
           <!-- Username -->
           <div class="d-none profile d-flex justify-content-end">
-            <span class="navbar-text me-2  text-light px-2"
-              ><img src="images/user.png" class="img-fluid mx-2" alt="" width="24" height="24" class="d-inline-block align-text-top" /> Username <a href="" class="pe-auto link-light" data-bs-toggle="modal" data-bs-target="#logoutModal"><i class="bi bi-box-arrow-right pe-auto px-2"></i></a>
+            <span class="navbar-text me-2 px-2"
+              >
+              <img src="images/user.png" class="img-fluid" alt="" width="24" height="24" class="d-inline-block align-text-top" /> 
+              <a class="d-inline-block align-text-top"><i class="fas fa-user-circle"></i></a> Username <a href="" class="pe-auto link-dark" data-bs-toggle="modal" data-bs-target="#logoutModal"><i class="bi bi-box-arrow-right pe-auto px-2"></i></a>
             </span>
           </div>
         </div>
@@ -58,7 +61,7 @@
                       <h1 class="text-bolder text-blue-300">Buat Catatan Menu Makanan Harianmu</h1>
                       <p class="lead">Kendalikan konsumsi kalori harianmu. Lacak kalori dan buat daftar menu harianmu dengan menU</p><br>
                       <p>Produk digital bidang kesehatan yang dapat membantu program diet untuk semua kalangan</p><br><br>
-                      <a class="btn btn-primary btn-lg" href="#" role="button">Getting Started</a>
+                      <a class="btn btn-primary btn-lg rounded-pill" href="#" role="button">Getting Started</a>
                     </div>
                     <div class="col order-0">
                       <img src="./images/imageLandingPage.png" width="100%" class="my-10">
@@ -113,7 +116,7 @@
             </div>
             <div class="carousel-inner text-center p-5 mx-auto position-relative">
               <div class="carousel-item active">
-                <div class="content col-lg shadow p-3 m-2 bg-body rounded">
+                <div class="content col-lg shadow p-3 m-2 bg-body rounded-4">
                   <img src="./images/search.png" width="20%" class="m-2">
                   <h4>Lacak Kalori</h4>
                   <i class="fa-solid fa-magnifying-glass"></i>
@@ -121,7 +124,7 @@
                 </div>
               </div>
               <div class="carousel-item">
-                <div class="content col-lg shadow p-3 m-2 bg-body rounded">
+                <div class="content col-lg shadow p-3 m-2 bg-body rounded-4">
                   <img src="./images/note.png" width="20%" class="m-2">
                   <h4>Lihat Daftar Menumu</h4>
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -129,7 +132,7 @@
                 </div>
               </div>
               <div class="carousel-item">
-                <div class="content col-lg shadow p-3 m-2 bg-body rounded">
+                <div class="content col-lg shadow p-3 m-2 bg-body rounded-4">
                   <img src="./images/search.png" width="20%" class="m-2">
                   <h4>Lihat Riwayat Kalori</h4>
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -137,7 +140,7 @@
                 </div>
               </div>
               <div class="carousel-item">
-                <div class="content col-lg shadow p-3 m-2 bg-body rounded">
+                <div class="content col-lg shadow p-3 m-2 bg-body rounded-4">
                   <img src="./images/note.png" width="20%" class="m-2">
                   <h4>Artikel Diet</h4>
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -209,10 +212,30 @@
           </div>
       </div>
     </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#dbf0ff" fill-opacity="1" d="M0,32L120,53.3C240,75,480,117,720,117.3C960,117,1200,75,1320,53.3L1440,32L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
     <footer>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#dbf0ff" fill-opacity="1" d="M0,256L120,245.3C240,235,480,213,720,213.3C960,213,1200,235,1320,245.3L1440,256L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"/></svg>
-        <p class="text-center pb-10 text-dark">&copy; Copyright 2021</p>
+      <h3 class="text-center">menU</h1>
+      <div class="container p-5">
+        <div class="row" id="footers">
+          <div class="col">
+            <h5>Connect</h5>
+            <p>Facebook</p>
+            <p>Twitter</p>
+            <p>Instagram</p>
+            <p>Youtube</p>
+          </div>
+          <div class="col">
+            <h5>Learn More</h5>
+            <p>About menU</p>
+            <p>Press</p>
+            <p>Articles</p>
+            <p>menU for Work</p>
+          </div>
         </div>
+      </div>
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#dbf0ff" fill-opacity="1" d="M0,256L120,245.3C240,235,480,213,720,213.3C960,213,1200,235,1320,245.3L1440,256L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"/></svg> -->
+        <p class="text-center pb-10 text-dark">&copy; Copyright 2021</p>
+
     </footer>
       <!-- Modal for Login -->
       <div class="modal fade" id="exampleModalMasuk" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -297,7 +320,7 @@
             <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">Anda yakin ingin keluar dari menU?</div>
-          <div class="modal-footer">
+          <div class="modal-footer d-flex justify-content-center">
             <button type="button" class="btn btn-info" data-bs-dismiss="modal">Batalkan</button>
             <button type="button" class="btn btn-primary" id="btn-keluar" data-bs-dismiss="modal">Keluar</button>
           </div>
