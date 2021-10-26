@@ -23,7 +23,6 @@
 /* Modal CSS */
 .modal-confirm {
   color: #636363;
-  width: 400px;
   margin: 30px auto;
 }
 
@@ -62,8 +61,15 @@ tr {
   color: #999;
 }
 
+.modal-confirm .modal-footer {
+  display: flex;
+  justify-content: center;
+}
+
 .modal-confirm .modal-footer a {
   color: #999;
+  display: flex;
+  justify-content: center;
 }
 
 .modal-confirm .icon-box {
@@ -282,5 +288,13 @@ footer > h3 {
 
   h5 {
     font-size: 12px;
+  }
+
+  .modal-confirm {
+    width: 300px;
+  }
+
+  .modal-confirm .btn {
+    min-width: 100px;
   }
 }
