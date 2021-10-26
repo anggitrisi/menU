@@ -245,6 +245,7 @@ addMenuToList.addEventListener("click", function (event) {
     elLogIn.click()
     return;
   }
+  
   // extract user data
   const servingAmountInput = servingAmount.value;
   // cek value
