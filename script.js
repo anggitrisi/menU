@@ -94,6 +94,7 @@ elSubmitSignUp.addEventListener("click", function () {
       console.log(newData);
       sessionStorage.setItem("username", elInputUsername.value);
       sessionStorage.setItem("password", password);
+      location.reload();
     }
   } else {
     if (emailValidator.test(email)) {
@@ -123,6 +124,7 @@ elSubmitLogIn.addEventListener("click", function () {
       sessionStorage.setItem("username", username);
       sessionStorage.setItem("password", password);
       elCloseBtn[0].click();
+      location.reload();
     } else {
       alert("Password salah");
     }

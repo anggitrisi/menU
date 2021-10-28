@@ -78,6 +78,7 @@ elSubmitSignUp.addEventListener("click", function () {
       console.log(newData);
       sessionStorage.setItem("username", elInputUsername.value);
       sessionStorage.setItem("password", password);
+      location.reload();
     }
   } else {
     if (emailValidator.test(email)) {
@@ -203,7 +204,7 @@ const modalCalories = addModal.querySelector("#modal-calories");
 const modalImage = addModal.querySelector("#modal-picture");
 const modalAddMenuToListButton = addModal.querySelector("#add-menu-to-list");
 const servingAmount = addModal.querySelector("#servingAmount");
-const elBtnClose = addModal.querySelector(".btn-close")
+const elBtnClose = addModal.querySelector(".btn-close");
 // const servingOption = addModal.querySelector("#servingOption");
 
 // get modal content
@@ -241,11 +242,11 @@ addMenuToList.addEventListener("click", function (event) {
   console.log(username);
   if (!username) {
     alert("Anda harus login terlebih dahulu");
-    elBtnClose.click()
-    elLogIn.click()
+    elBtnClose.click();
+    elLogIn.click();
     return;
   }
-  
+
   // extract user data
   const servingAmountInput = servingAmount.value;
   // cek value
