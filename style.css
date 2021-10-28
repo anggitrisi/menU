@@ -298,3 +298,20 @@ footer > h3 {
     min-width: 100px;
   }
 }
+
+/* Artikel */
+.category{
+  height:100vh;
+}
+
+div.col-12.col-lg-5.border-3.shadow-sm.rounded-3.mx-1:hover{
+  box-shadow: 0 0 20px rgba(33,33,33,.2); 
+}
+
+div.col.d-flex.justify-content-center.justify-content-md-start:hover{
+  color: #3974c8;
+}
+
+div.col-12.d-flex.justify-content-start.m-2{
+  color:grey;
+}
