@@ -128,14 +128,14 @@ function drawMenuCard() {
   listMenu.forEach((menu) => {
     let html = "";
     Array.from(listMenu).forEach((menu) => {
-      let htmlRender = `<div class="card col-5 h-100 p-2 mx-5">
+      let htmlRender = `<div class="card col-6 h-100 p-1">
               <div class ="row g-0 p-1">
                 <div class="col-lg-4">
                   <img src="${menu.image_url}" class="img-fluid h-100 img-fit" alt="" />
                 </div>
                 <div class="col-lg-4 align-self-center d-none d-lg-block d-xl-blockk">
                   <div class="row m-0 g-1">
-                    <div class="col-lg-6 px-4">
+                    <div class="col-lg-6 px-2">
                       <div class="card" style="width: 5rem; height: 5rem">
                         <div class="card-body pt-3 p-0 fs-6">
                           <h6 class="card-text text-center">${menu.macronutrients.carbs}g</h6>
@@ -143,7 +143,7 @@ function drawMenuCard() {
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-6 px-4">
+                    <div class="col-lg-6 px-3">
                       <div class="card" style="width: 5rem; height: 5rem">
                         <div class="card-body pt-3 p-0 fs-6">
                           <h6 class="card-text text-center">${menu.macronutrients.fat}g</h6>
@@ -151,7 +151,7 @@ function drawMenuCard() {
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-6 px-4">
+                    <div class="col-lg-6 px-2">
                       <div class="card" style="width: 5rem; height: 5rem">
                         <div class="card-body pt-3 p-0 fs-6">
                           <h6 class="card-text text-center">${menu.macronutrients.protein}g</h6>
@@ -159,7 +159,7 @@ function drawMenuCard() {
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-6 px-4">
+                    <div class="col-lg-6 px-3">
                       <div class="card" style="width: 5rem; height: 5rem">
                         <div class="card-body pt-3 p-0 fs-6">
                           <h6 class="card-text text-center">${menu.macronutrients.carbs}kkal</h6>
