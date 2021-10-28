@@ -275,10 +275,10 @@ function drawMenuCardDaftarMenuHariIni() {
       const liTotalFat = document.querySelector("#fat-total");
       const liTotalCalories = document.querySelector("#calories-total");
 
-      liTotalCarbs.innerText = totalCarbs + "g";
-      liTotalProtein.innerText = totalProtein + "g";
-      liTotalFat.innerText = totalFat + "g";
-      liTotalCalories.innerText = totalCalories + "kkal";
+      liTotalCarbs.innerText = totalCarbs.toFixed(2) + "g";
+      liTotalProtein.innerText = totalProtein.toFixed(2) + "g";
+      liTotalFat.innerText = totalFat.toFixed(2) + "g";
+      liTotalCalories.innerText = totalCalories.toFixed(2) + "kkal";
 
       // console.log(totalCarbs)
     });
