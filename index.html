@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>menU</title>
+    <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="./vendor/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #3974c8">
+      <div class="container-fluid">
+        <a class="navbar-brand mb-0 h1" href="#"><img src="images/logo.png" alt="" width="30" height="30" class="d-inline-block align-text-top" />menU</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div v class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <ul class="navbar-nav me-auto my-2 my-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./menu.html">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./menuku.html">Menuku</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./artikel.html">Artikel</a>
+            </li>
+          </ul>
+          <div class="d-flex justify-content-end">
+            <!-- Signup button -->
+            <button type="button" class="btn btn-primary btn-md mx-2 rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModalDaftar" id="signup">Daftar</button>
+            <!-- Login button -->
+            <button type="button" class="btn btn-danger btn-md rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModalMasuk" id="login">Masuk</button>
+          </div>
+          <!-- Username -->
+          <div class="d-none profile d-flex justify-content-end">
+            <span class="navbar-text me-2 px-2">
+              <a class="d-inline-block align-text-top"><i class="fas fa-user-circle"></i></a> Username
+              <a href="" class="pe-auto link-dark" data-bs-toggle="modal" data-bs-target="#logoutModal"><i class="fas fa-sign-out-alt pe-auto px-2"></i></a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <!-- SideBar -->
+        <div class="col-2 category col-md-4 shadow" >
+          <h3 class="d-none d-md-block pt-4 ps-3">Kategori</h3><br>
+          <div class="col">
+            <div class="col d-flex justify-content-center justify-content-md-start">
+              <i class="fab fa-nutritionix px-3"></i>
+              <h5 class="d-none d-md-block">Kalori</h5>
+            </div>
+            <div class="col d-flex justify-content-center justify-content-md-start my-3">
+              <i class="fas fa-running px-3"></i>
+              <h5 class="d-none d-md-block">Olahraga</h5>
+            </div>
+            <div class="col d-flex justify-content-center d-md-flex justify-content-md-start my-3">
+              <i class="fas fa-utensils px-3"></i>
+              <h5 class="d-none d-md-block">Resep Makanan</h5>
+            </div>
+          </div>
+        </div>
+        <!-- End SideBar -->
+
+        <!-- Articles -->
+        <div class="col-8">
+          <div class="row mx-2 g-3 gx-2">
+            <div class="col-12 col-lg-6 border-3 shadow-sm rounded-3">
+                <img src="https://asset.kompas.com/crops/Mbl3u9a8eVoLTBah5DBUWnuklTI=/0x18:1000x685/750x500/data/photo/2020/12/30/5fec3941f1fb7.jpg" width="100%" height="auto">
+                <div class="col-12 d-flex justify-content-start m-2">
+                  <i class="fas fa-calendar-alt pe-2"></i>
+                  <h6>5 Oktober 2021</h6>
+                </div>
+                <h5 class="px-2">Cara Mencuci Masker Kain Anjuran Kemenkes</h5>
+                <p class="px-2">Meski cara mencucinya terkesan sama dengan mencuci pakaian, tapi masker kain perlu dicuci sesuai anjuran Kementerian Kesehatan RI.</p>
+            </div>
+            <div class="col-12 col-lg-6 border-3 shadow-sm rounded-3">
+                <img src="https://asset.kompas.com/crops/Mbl3u9a8eVoLTBah5DBUWnuklTI=/0x18:1000x685/750x500/data/photo/2020/12/30/5fec3941f1fb7.jpg" width="100%" height="auto">
+                <div class="col-12 d-flex justify-content-start m-2">
+                  <i class="fas fa-calendar-alt pe-2"></i>
+                  <h6>5 Oktober 2021</h6>
+                </div>
+                <h5 class="px-2">Cara Mencuci Masker Kain Anjuran Kemenkes</h5>
+                <p class="px-2">Meski cara mencucinya terkesan sama dengan mencuci pakaian, tapi masker kain perlu dicuci sesuai anjuran Kementerian Kesehatan RI.</p>
+            </div>
+            <div class="col-12 col-lg-6 border-3 shadow-sm rounded-3">
+                <img src="https://asset.kompas.com/crops/Mbl3u9a8eVoLTBah5DBUWnuklTI=/0x18:1000x685/750x500/data/photo/2020/12/30/5fec3941f1fb7.jpg" width="100%" height="auto">
+                <div class="col-12 d-flex justify-content-start m-2">
+                  <i class="fas fa-calendar-alt pe-2"></i>
+                  <h6>5 Oktober 2021</h6>
+                </div>
+                <h5 class="px-2">Cara Mencuci Masker Kain Anjuran Kemenkes</h5>
+                <p class="px-2">Meski cara mencucinya terkesan sama dengan mencuci pakaian, tapi masker kain perlu dicuci sesuai anjuran Kementerian Kesehatan RI.</p>
+            </div>
+            <div class="col-12 col-lg-6 border-3 shadow-sm rounded-3">
+                <img src="https://asset.kompas.com/crops/Mbl3u9a8eVoLTBah5DBUWnuklTI=/0x18:1000x685/750x500/data/photo/2020/12/30/5fec3941f1fb7.jpg" width="100%" height="auto">
+                <div class="col-12 d-flex justify-content-start m-2">
+                  <i class="fas fa-calendar-alt pe-2"></i>
+                  <h6>5 Oktober 2021</h6>
+                </div>
+                <h5 class="px-2">Cara Mencuci Masker Kain Anjuran Kemenkes</h5>
+                <p class="px-2">Meski cara mencucinya terkesan sama dengan mencuci pakaian, tapi masker kain perlu dicuci sesuai anjuran Kementerian Kesehatan RI.</p>
+            </div>
+            
+
+          </div>
+        </div>
+        <!-- End Articles -->
+      </div>
+    </div>
+          <!-- Modal for Login -->
+          <div class="modal fade" id="exampleModalMasuk" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div class="d-flex justify-content-end">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="container">
+                    <div class="row row-cols-1 gy-2">
+                      <h2 class="modal-title text-center" id="exampleModalLabel">menU</h2><br>
+                      <div class="col d-none">
+                        <input type="text" label="email" class="p-2 email" placeholder="email">
+                      </div>
+                      <div class="col">
+                        <input type="text" label="username" class="p-2 username" placeholder="username">
+                      </div>
+                      <div class="col">
+                        <input type="password" name="pass" label="password" id="exampleFormControlInput1" class="p-2 pass" placeholder="password">
+                        <div id="passwordHelpBlock" class="form-text">
+                          Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+                        </div><br>
+                        <div class="position-relative py-3">
+                          <div class="position-absolute top-50 start-50 translate-middle">
+                            <button type="submit" id="submitLogIn" class="btn btn-primary">Masuk</button>
+                          </div>
+                        </div>
+                        <div class="form-text" id="exampleFormControlInput2">Belum punya akun? <a href="#" class="min-text text-blue fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModalDaftar">Daftar</a> </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal for SignUp -->
+          <div class="modal fade" id="exampleModalDaftar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div class="d-flex justify-content-end">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="container">
+                    <div class="row row-cols-1 gy-2">
+                      <h2 class="modal-title text-center" id="exampleModalLabel">menU</h2><br>
+                      <div class="col">
+                        <input type="text" label="email" class="p-2 email" placeholder="email">
+                      </div>
+                      <div class="col">
+                        <input type="text" label="username" class="p-2 user" placeholder="username">
+                      </div>
+                      <div class="col">
+                        <input type="password" name="pass" label="password" id="exampleFormControlInput3" class="p-2 pass" placeholder="password">
+                        <div id="passwordHelpBlock" class="form-text">
+                          Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+                        </div><br>
+                        <div class="position-relative py-3">
+                          <div class="position-absolute top-50 start-50 translate-middle">
+                            <button type="submit" id="submitSignUp" class="btn btn-primary">Daftar</button>
+                          </div>
+                        </div>
+                        <div class="form-text" id="exampleFormControlInput4">Sudah punya akun? <a href="" class="min-text text-blue fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModalMasuk">Masuk</a> </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+        <!-- Logout Modal -->
+        <div class="modal fade" id="logoutModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-confirm">
+            <div class="modal-content">
+              <div class="modal-header">
+                <div class="icon-box">
+                  <i class="bi bi-exclamation"></i>
+                </div>
+                <h4 class="modal-title text-center" id="staticBackdropLabel">Anda yakin?</h4>
+                <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">Anda yakin ingin keluar dari menU?</div>
+              <div class="modal-footer d-flex justify-content-center">
+                <button type="button" class="btn btn-info" data-bs-dismiss="modal">Batalkan</button>
+                <button type="button" class="btn btn-primary" id="btn-keluar" data-bs-dismiss="modal">Keluar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    <script src="./vendor/js/bootstrap.bundle.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
