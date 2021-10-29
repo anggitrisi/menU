@@ -13,7 +13,7 @@ const listMenu = [
   },
   {
     id: 2,
-    name: "ayam kuah gulai",
+    name: "ayam gulai",
     image_url: "https://media.istockphoto.com/photos/indonesian-traditional-cuisine-kari-or-kare-or-gulai-ayam-spicy-picture-id1335581726?b=1&k=20&m=1335581726&s=170667a&w=0&h=sHljUFjswH8AZXyBBaXU8Thm4eAMUO5DQS-N1SW6Fdk=",
     serving_gram: 100,
     calories: 90,
