@@ -170,6 +170,7 @@ function drawMenuCard() {
                   <div class="card-body d-flex justify-content-center">
                     <div class="d-flex flex-column justify-content-center">
                       <h6 class="card-title">${menu.name}</h6>
+                      <p class="card-title"><small>(per ${menu.serving_gram}g)</small></p>
                       <p class="card-text d-block d-lg-none d-xxl-">
                         <small class="text-muted p-0e"><i class="fas fa-fire"></i> ${menu.calories}</small>
                       </p>
@@ -217,10 +218,10 @@ addModal.addEventListener("show.bs.modal", function (event) {
 
   // console.log(menuById);
   modalTitle.innerHTML = menuById.name;
-  modalCarbs.innerHTML = menuById.macronutrients.carbs;
-  modalProtein.innerHTML = menuById.macronutrients.protein;
-  modalFat.innerHTML = menuById.macronutrients.fat;
-  modalCalories.innerHTML = menuById.calories;
+  modalCarbs.innerHTML = menuById.macronutrients.carbs + "g";
+  modalProtein.innerHTML = menuById.macronutrients.protein + "g";
+  modalFat.innerHTML = menuById.macronutrients.fat + "g";
+  modalCalories.innerHTML = menuById.calories + "kkal";
   modalImage.setAttribute("src", menuById.image_url);
   // set id to 'tambahkan' button
   modalAddMenuToListButton.setAttribute("data-id", menuById.id);
