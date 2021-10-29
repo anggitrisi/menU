@@ -80,7 +80,6 @@ elSubmitSignUp.addEventListener("click", function () {
       const newData = localStorage.setItem("userProfile", JSON.stringify(addProfile));
       console.log(newData);
       sessionStorage.setItem("username", elInputUsername.value);
-      sessionStorage.setItem("password", password);
       location.reload();
     }
   } else {
