@@ -1,16 +1,3 @@
-// const togglerEl = document.querySelector(".navbar-toggler")
-// const closeBtnEl = document.querySelector("#closed")
-// const navCollapse = document.querySelector(".navbar-collapse")
-
-// togglerEl.addEventListener("click", function(){
-//     closeBtnEl.classList.remove("d-none")
-//     togglerEl.classList.add("d-none")
-// })
-// closeBtnEl.addEventListener("click", function(){
-//     togglerEl.classList.remove("d-none")
-//     closeBtnEl.classList.add("d-none")
-// })
-
 // Element Modal
 
 const elLogIn = document.querySelector("#login");
@@ -75,7 +62,7 @@ elSubmitSignUp.addEventListener("click", function () {
     const anyUser = Profil.find((e) => e.username === elInputUsername.value);
     const anyEmail = Profil.find((e) => e.email === email);
     if (anyUser && anyEmail) {
-      alert("Username dan telah digunakan");
+      alert("Username dan email telah digunakan");
     } else if (anyUser && !anyEmail) {
       alert("Username telah digunakan");
     } else if (!anyUser && anyEmail) {
@@ -122,7 +109,6 @@ elSubmitLogIn.addEventListener("click", function () {
       elLogIn.classList.add("d-none");
       elCloseBtn[1].click();
       sessionStorage.setItem("username", username);
-      sessionStorage.setItem("password", password);
       elCloseBtn[0].click();
       location.reload();
     } else {
@@ -136,6 +122,5 @@ elSubmitLogIn.addEventListener("click", function () {
 // Keluar
 elKelBtn.addEventListener("click", function () {
   sessionStorage.removeItem("username");
-  sessionStorage.removeItem("password");
   location.reload();
 });
