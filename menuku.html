@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>menU</title>
+    <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="./vendor/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #3974c8">
+      <div class="container-fluid">
+        <a class="navbar-brand mb-0 h1" href="#"><img src="images/logo.png" alt="" width="30" height="30" class="d-inline-block align-text-top" />menU</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div v class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <ul class="navbar-nav me-auto my-2 my-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./menu.html">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./menuku.html">Menuku</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./artikel.html">Artikel</a>
+            </li>
+          </ul>
+          <div class="d-flex justify-content-end">
+            <!-- Signup button -->
+            <button type="button" class="btn btn-primary btn-md mx-2 rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModalDaftar" id="signup">Daftar</button>
+            <!-- Login button -->
+            <button type="button" class="btn btn-danger btn-md rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModalMasuk" id="login">Masuk</button>
+          </div>
+          <!-- Username -->
+          <div class="d-none profile d-flex justify-content-end">
+            <span class="navbar-text me-2 px-2">
+              <a class="d-inline-block align-text-top"><i class="fas fa-user-circle"></i></a> Username
+              <a href="" class="pe-auto link-dark" data-bs-toggle="modal" data-bs-target="#logoutModal"><i class="fas fa-sign-out-alt pe-auto px-2"></i></a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- If not login -->
+    <div class="container p-4" id="doc-sleep">
+      <div class="d-flex flex-column align-items-center ml-5 p-5">
+        <img src="./images/doc-sleep.png" width="20%" class="ml-5" />
+        <p class="text-muted my-3 text-center">Untuk melihat daftar menu, masuk ke akun kamu dulu yuk!</p>
+        <button type="button" class="btn btn-outline-primary btn-lg btn-block col-10" data-bs-toggle="modal" data-bs-target="#exampleModalMasuk" id="login">Masuk</button>
+      </div>
+    </div>
+
+    <!-- For Empty Menu -->
+    <div class="container p-4 d-none" id="empty-menu-list">
+      <div class="d-flex flex-column align-items-center ml-5 p-5">
+        <img src="./images/empty-data.png" width="40%" class="ml-5" />
+        <p class="text-muted text-center">Anda belum membuat daftar menu apapun, Silahkan buat daftar menu anda sekarang!</p>
+      </div>
+    </div>
+
+    <div class="container p-4 d-none" id="menu-list">
+      <!-- Menu Hari Ini -->
+      <h3 class="text-center text-lg-start">Daftar Menu Hari Ini</h3>
+      <h6 class="text-center text-lg-start" id="today-date"></h6>
+      <div class="row">
+        <div class="col-lg-7 col-sm-12">
+          <div class="row" id="daftar-menu"></div>
+        </div>
+
+        <!-- Right Section -->
+        <!-- Flush -->
+        <div class="col-lg-5" id="nutritions-total">
+          <h5 class="my-2">Total Kandungan Gizi</h5>
+          <div class="row">
+            <div class="col-8">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Karbohidrat</li>
+                <li class="list-group-item">Protein</li>
+                <li class="list-group-item">Lemak</li>
+                <li class="list-group-item fw-bold"><i class="fas fa-fire"></i> Kalori</li>
+              </ul>
+            </div>
+
+            <div class="col-4">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item" id="carbs-total">379g</li>
+                <li class="list-group-item" id="protein-total">200g</li>
+                <li class="list-group-item" id="fat-total">100g</li>
+                <li class="list-group-item fw-bold" id="calories-total">2600kkal</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- End Flush -->
+        <!-- End Right Section -->
+      </div>
+    </div>
+    <!-- Delete Modal -->
+    <div class="modal fade" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-confirm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="icon-box">
+              <i class="bi bi-exclamation"></i>
+            </div>
+            <h4 class="modal-title text-center" id="staticBackdropLabel">Anda yakin?</h4>
+            <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">Anda yakin ingin menghapus menu ini dari daftar? Proses ini tidak dapat dibatalkan.</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-info" data-bs-dismiss="modal">Batalkan</button>
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="delete-confirm-hapus">Hapus</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div class="modal fade" id="editModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-confirm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h5>Edit Menu</h5>
+          </div>
+          <div class="modal-body text-start">
+            <div class="container">
+              <div class="row">
+                <h6 class="text-center text-md-start text-lg-start" id="modal-title">Ayam Goreng</h6>
+                <div class="col-lg-4 py-3 d-lg-block">
+                  <img src="https://images.unsplash.com/photo-1626082896492-766af4eb6501?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=580&q=80" class="img-fluid" alt="..." id="modal-picture" />
+                </div>
+                <div class="col-lg-8 col-md-12">
+                  <table class="table table-borderless table-sm">
+                    <tr>
+                      <th colspan="3" id="modal-portion"><small>Kandungan gizi per 100g</small></th>
+                    </tr>
+                    <tr>
+                      <td><small>Karbohidrat</small></td>
+                      <td id="modal-carbs"><small>g</small></td>
+                    </tr>
+                    <tr>
+                      <td><small>Protein</small></td>
+                      <td id="modal-protein"><small>g</small></td>
+                    </tr>
+                    <tr>
+                      <td><small>Lemak</small></td>
+                      <td id="modal-fat"><small>100g</small></td>
+                    </tr>
+                    <tr>
+                      <td class="text-muted">
+                        <small><i class="fas fa-fire"></i> Kalori</small>
+                      </td>
+                      <td class="text-muted" id="modal-calories"><small>300kkal</small></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-group">
+                  <input type="number" class="form-control m-2" placeholder="jumlah" aria-label="jumlah" id="servingAmount" />
+                  <select id="servingOption" class="form-select m-2">
+                    <!-- <option value="true" selected>porsi (100g)</option> -->
+                    <option value="false">gram</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-info" data-bs-dismiss="modal">Batalkan</button>
+            <button type="button" class="btn btn-success" id="edit-confirm-simpan">Simpan</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Edit Modal -->
+
+    <!-- Modal for Login -->
+    <div class="modal fade" id="exampleModalMasuk" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="d-flex justify-content-end">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="container">
+              <div class="row row-cols-1 gy-2">
+                <h2 class="modal-title text-center" id="exampleModalLabel">menU</h2>
+                <br />
+                <div class="col d-none">
+                  <input type="text" label="email" class="p-2 email" placeholder="email" />
+                </div>
+                <div class="col">
+                  <input type="text" label="username" class="p-2 username" placeholder="username" />
+                </div>
+                <div class="col">
+                  <input type="password" name="pass" label="password" id="exampleFormControlInput1" class="p-2 pass" placeholder="password" />
+                  <div id="passwordHelpBlock" class="form-text">Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.</div>
+                  <br />
+                  <div class="position-relative py-3">
+                    <div class="position-absolute top-50 start-50 translate-middle">
+                      <button type="submit" id="submitLogIn" class="btn btn-primary">Masuk</button>
+                    </div>
+                  </div>
+                  <div class="form-text" id="exampleFormControlInput2">Belum punya akun? <a href="#" class="min-text text-blue fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModalDaftar">Daftar</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for SignUp -->
+    <div class="modal fade" id="exampleModalDaftar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="d-flex justify-content-end">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="container">
+              <div class="row row-cols-1 gy-2">
+                <h2 class="modal-title text-center" id="exampleModalLabel">menU</h2>
+                <br />
+                <div class="col">
+                  <input type="text" label="email" class="p-2 email" placeholder="email" />
+                </div>
+                <div class="col">
+                  <input type="text" label="username" class="p-2 user" placeholder="username" />
+                </div>
+                <div class="col">
+                  <input type="password" name="pass" label="password" id="exampleFormControlInput3" class="p-2 pass" placeholder="password" />
+                  <div id="passwordHelpBlock" class="form-text">Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.</div>
+                  <br />
+                  <div class="position-relative py-3">
+                    <div class="position-absolute top-50 start-50 translate-middle">
+                      <button type="submit" id="submitSignUp" class="btn btn-primary">Daftar</button>
+                    </div>
+                  </div>
+                  <div class="form-text" id="exampleFormControlInput4">Sudah punya akun? <a href="" class="min-text text-blue fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModalMasuk">Masuk</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Logout Modal -->
+    <div class="modal fade" id="logoutModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-confirm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="icon-box">
+              <i class="bi bi-exclamation"></i>
+            </div>
+            <h4 class="modal-title text-center" id="staticBackdropLabel">Anda yakin?</h4>
+            <button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">Anda yakin ingin keluar dari menU?</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-info" data-bs-dismiss="modal">Batalkan</button>
+            <button type="button" class="btn btn-primary" id="btn-keluar" data-bs-dismiss="modal">Keluar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./vendor/js/bootstrap.bundle.js"></script>
+    <script type="module" src="scriptMenuku.js"></script>
+  </body>
+</html>
